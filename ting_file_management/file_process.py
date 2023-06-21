@@ -1,5 +1,4 @@
 from ting_file_management.file_management import txt_importer
-import sys
 from ting_file_management.queue import Queue
 
 
@@ -25,6 +24,7 @@ def process(path_file, instance):
 def remove(instance):
     if instance.is_empty():
         print("Não há elementos")
+        return
 
     dequeued_file = instance.dequeue()
     print(f"Arquivo {dequeued_file['nome_do_arquivo']} removido com sucesso")
