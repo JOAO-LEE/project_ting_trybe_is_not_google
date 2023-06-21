@@ -11,3 +11,7 @@ def txt_importer(path_file: str):
             return stacked_text
     except FileNotFoundError:
         print(f"Arquivo {path_file} não encontrado", file=sys.stderr)
+
+
+# Reference of the '.endswith()' method used above
+# https://stackoverflow.com/questions/5899497/how-can-i-check-the-extension-of-a-file
