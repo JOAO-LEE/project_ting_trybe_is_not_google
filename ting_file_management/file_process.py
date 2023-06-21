@@ -1,8 +1,6 @@
 from ting_file_management.file_management import txt_importer
 import sys
 
-# from ting_file_management.queue import Queue
-
 
 def process(path_file, instance):
     for index in range(len(instance)):
@@ -36,13 +34,5 @@ def file_metadata(instance, position):
     if position > len(instance) - 1 or instance.is_empty():
         print("Posição inválida", file=sys.stderr)
         return
-    """Aqui irá sua implementação"""
     found_file = instance.search(position)
     print(found_file)
-
-
-# fila = Queue()
-# process("statics/arquivo_teste.txt", fila)
-# print("---------------------------------")
-
-# remove(fila)
